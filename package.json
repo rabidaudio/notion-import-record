@@ -19,5 +19,13 @@
     "dotenv": "^16.3.1",
     "jsdom": "^22.1.0",
     "yargs": "^17.7.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rabidaudio/notion-import-record.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rabidaudio/notion-import-record/issues"
+  },
+  "homepage": "https://github.com/rabidaudio/notion-import-record#readme"
 }
