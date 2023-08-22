@@ -4,6 +4,9 @@ I have a [Notion app](https://www.notion.so/Release-Tracker-5f967c3b1c30445b857a
 Most of my records come from Bandcamp or Spotify, so this script allows me to import them directly without copy-pasting a lot of info.
 
 ```bash
+npm i -g .
+which notion-import-record
+
 notion-import-record bandcamp https://awakebutstillinbed.bandcamp.com/album/chaos-takes-the-wheel-and-i-am-a-passenger https://ashtuesday.bandcamp.com/track/calypso
 
 notion-import-record spotify https://open.spotify.com/album/05PlYzA6iAlIjPclb5dUcb

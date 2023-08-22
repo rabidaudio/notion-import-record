@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Import records into my Release Tracker Notion document automatically via URL",
   "main": "index.js",
+  "bin": {
+    "notion-import-record": "./index.js"
+  },
   "scripts": {
     "lint": "standard",
     "lint:fix": "standard --fix",
