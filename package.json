@@ -1,0 +1,23 @@
+{
+  "name": "notion-import-record",
+  "version": "1.0.0",
+  "description": "Import records into my Release Tracker Notion document automatically via URL",
+  "main": "index.js",
+  "scripts": {
+    "lint": "standard",
+    "lint:fix": "standard --fix",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Julien Knight <cjk@rabidaudio.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "standard": "^17.1.0"
+  },
+  "dependencies": {
+    "@notionhq/client": "^2.2.11",
+    "dayjs": "^1.11.9",
+    "dotenv": "^16.3.1",
+    "jsdom": "^22.1.0",
+    "yargs": "^17.7.2"
+  }
+}
