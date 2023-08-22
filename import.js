@@ -16,4 +16,20 @@ async function parseBandcampUrl (url) {
   }
 }
 
-module.exports = { parseBandcampUrl }
+async function parseSpotifyUrl (url) {
+  const res = await fetch(url)
+  const body = await res.text()
+  const dom = new JSDOM(body)
+  const readMetaTag = (tag) => dom.window.document.querySelector(`meta[${tag}]`).getAttribute('content')
+  return {
+    // TODO: ideally there'd be a better way but Spotify is clunky.
+    // This will break for artist names with " · " in them (hopefully none??)
+    Artist: readMetaTag('property="og:description"').split(' · ')[0],
+    Album: readMetaTag('property="og:title"'),
+    'Release Date': readMetaTag('name="music:release_date"'),
+    URL: url,
+    'Album Art': readMetaTag('property="og:image"')
+  }
+}
+
+module.exports = { parseBandcampUrl, parseSpotifyUrl }
